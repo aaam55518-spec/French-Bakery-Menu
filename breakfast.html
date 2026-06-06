@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الفطور – مخبز الريف الفرنسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0A3E27;--gold:#D9C295;--bg:#f5edd8;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);font-family:'Noto Naskh Arabic',serif;color:var(--green);min-height:100vh;}
+    header{background:var(--green);padding:1.5rem 1rem 1.2rem;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(217,194,149,.04) 20px,rgba(217,194,149,.04) 40px);}
+    .back-btn{position:absolute;top:1.1rem;left:1rem;background:none;border:1px solid rgba(217,194,149,.35);border-radius:4px;color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;padding:.3rem .7rem;text-decoration:none;letter-spacing:1px;z-index:2;}
+    header h1{font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.15rem;}
+    header p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:rgba(217,194,149,.6);letter-spacing:2px;}
+    .intro{padding:1.5rem 1.2rem .5rem;font-size:.85rem;opacity:.6;font-style:italic;text-align:center;}
+    .items-list{padding:0 1.2rem 1rem;}
+    .item-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0;border-bottom:1px solid rgba(10,62,39,.08);}
+    .item-row:last-child{border-bottom:none;}
+    .dot{color:var(--gold);margin-left:.4rem;font-size:1.1rem;}
+    .item-ar{font-size:1rem;font-weight:600;}
+    .item-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.72rem;color:var(--gold);margin-top:.1rem;}
+    .set-box{background:var(--green);color:var(--gold);text-align:center;margin:1rem 1.2rem;padding:1.4rem 1rem;border-radius:6px;}
+    .set-box .amount{font-family:'Playfair Display',serif;font-size:2.2rem;letter-spacing:1px;}
+    .set-box .iqd{font-size:.7rem;opacity:.65;}
+    .set-box .label{font-size:.8rem;opacity:.7;margin-top:.3rem;}
+    footer{text-align:center;padding:1.8rem 1rem;}
+    footer p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;opacity:.4;}
+    footer small{display:block;margin-top:.3rem;font-size:.65rem;opacity:.35;}
+  </style>
+</head>
+<body>
+<header>
+  <a class="back-btn" href="index.html">← Menu</a>
+  <h1>الفطور الصباحي</h1>
+  <p>Petit Déjeuner</p>
+</header>
+
+<p class="intro">وجبة فطور كاملة تشمل</p>
+
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> مناقيش جبنة وزعتر</div><div class="item-en">Cheese &amp; Za'atar Manakeesh</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> لبنة</div><div class="item-en">Labneh</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> زيتون نوعين</div><div class="item-en">Two Types of Olives</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> جبنة مثلثات</div><div class="item-en">Triangle Cheese Portions</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> قيمر</div><div class="item-en">Geymar (Iraqi Clotted Cream)</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> مربى نوعين</div><div class="item-en">Two Types of Jam</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> بيض عيون</div><div class="item-en">Fried Eggs (Sunny Side Up)</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> صمون الريف الفرنسي</div><div class="item-en">French Country Bakery Bread</div></div></div>
+  <div class="item-row"><div><div class="item-ar"><span class="dot">·</span> شاي</div><div class="item-en">Tea</div></div></div>
+</div>
+
+<div class="set-box">
+  <div class="amount">7,000 <span class="iqd">IQD</span></div>
+  <div class="label">للشخص الواحد</div>
+</div>
+
+<footer>
+  <p>Chaque matin français mérite d'être vécu lentement</p>
+  <small>كل صباح فرنسي يستحق أن يُعاش ببطء</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكريب – مخبز الريف الفرنسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0A3E27;--gold:#D9C295;--bg:#f5edd8;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);font-family:'Noto Naskh Arabic',serif;color:var(--green);}
+    header{background:var(--green);padding:1.5rem 1rem 1.2rem;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(217,194,149,.04) 20px,rgba(217,194,149,.04) 40px);}
+    .back-btn{position:absolute;top:1.1rem;left:1rem;background:none;border:1px solid rgba(217,194,149,.35);border-radius:4px;color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;padding:.3rem .7rem;text-decoration:none;z-index:2;}
+    header h1{font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.15rem;}
+    header p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:rgba(217,194,149,.6);letter-spacing:2px;}
+    .section-head{display:flex;align-items:center;gap:.8rem;padding:1.4rem 1.2rem .6rem;}
+    .section-head h2{font-size:1.25rem;font-weight:700;}
+    .section-head span{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:var(--gold);opacity:.7;}
+    .line{flex:1;height:1px;background:rgba(10,62,39,.12);}
+    .items-list{padding:0 1.2rem 1rem;}
+    .item-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0;border-bottom:1px solid rgba(10,62,39,.08);}
+    .item-row:last-child{border-bottom:none;}
+    .item-ar{font-size:1rem;font-weight:600;}
+    .item-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.72rem;color:var(--gold);margin-top:.1rem;}
+    .price{font-family:'Playfair Display',serif;font-size:1rem;white-space:nowrap;margin-right:.5rem;}
+    .iqd{font-size:.6rem;opacity:.5;}
+    footer{text-align:center;padding:1.5rem;}
+    footer p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;opacity:.4;}
+  </style>
+</head>
+<body>
+<header>
+  <a class="back-btn" href="index.html">← Menu</a>
+  <h1>الكريب</h1>
+  <p>Crêpe</p>
+</header>
+
+<div class="section-head"><h2>الكريب</h2><span>crêpe</span><div class="line"></div></div>
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar">كريب نبوتلا</div><div class="item-en">Nutella Crepe</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب فواكه</div><div class="item-en">Fruit Crepe</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب لوتس</div><div class="item-en">Lotus Crepe</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب اوريو</div><div class="item-en">Oreo Crepe</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب كيندر</div><div class="item-en">Kinder Crepe</div></div><div class="price">7,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب كت كات</div><div class="item-en">KitKat Crepe</div></div><div class="price">7,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب سوشبي</div><div class="item-en">Sushi Crepe</div></div><div class="price">7,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كريب الريف الفرنسي</div><div class="item-en">Special Crepe</div></div><div class="price">9,000 <span class="iqd">IQD</span></div></div>
+</div>
+
+<div class="section-head"><h2>الفواكه</h2><span>fruit salads</span><div class="line"></div></div>
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar">سلطة فواكه</div><div class="item-en">Fresh Fruit Salad</div></div><div class="price">8,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">سلطة فواكه مع قشطة</div><div class="item-en">Fresh Fruit Salad with Cream</div></div><div class="price">14,000 <span class="iqd">IQD</span></div></div>
+</div>
+
+<footer><p>French Countryside Bakery</p></footer>
+</body>
+</html>

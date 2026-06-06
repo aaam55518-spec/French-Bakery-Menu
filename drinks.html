@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المشروبات – مخبز الريف الفرنسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0A3E27;--gold:#D9C295;--bg:#f5edd8;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);font-family:'Noto Naskh Arabic',serif;color:var(--green);}
+    header{background:var(--green);padding:1.5rem 1rem 1.2rem;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(217,194,149,.04) 20px,rgba(217,194,149,.04) 40px);}
+    .back-btn{position:absolute;top:1.1rem;left:1rem;background:none;border:1px solid rgba(217,194,149,.35);border-radius:4px;color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;padding:.3rem .7rem;text-decoration:none;z-index:2;}
+    header h1{font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.15rem;}
+    header p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:rgba(217,194,149,.6);letter-spacing:2px;}
+    .section-head{display:flex;align-items:center;gap:.8rem;padding:1.4rem 1.2rem .6rem;}
+    .section-head h2{font-size:1.25rem;font-weight:700;}
+    .section-head span{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:var(--gold);opacity:.7;}
+    .line{flex:1;height:1px;background:rgba(10,62,39,.12);}
+    .items-list{padding:0 1.2rem 1rem;}
+    .item-row{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid rgba(10,62,39,.08);}
+    .item-row:last-child{border-bottom:none;}
+    .item-ar{font-size:1rem;font-weight:600;}
+    .item-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.72rem;color:var(--gold);margin-top:.1rem;}
+    .price{font-family:'Playfair Display',serif;font-size:1rem;white-space:nowrap;margin-right:.5rem;}
+    .iqd{font-size:.6rem;opacity:.5;}
+    footer{text-align:center;padding:1.5rem;}
+    footer p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;opacity:.4;}
+  </style>
+</head>
+<body>
+<header>
+  <a class="back-btn" href="index.html">← Menu</a>
+  <h1>المشروبات</h1>
+  <p>Boissons</p>
+</header>
+
+<div class="section-head"><h2>المشروبات الساخنة</h2><span>hot drinks</span><div class="line"></div></div>
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar">شاي</div><div class="item-en">Tea</div></div><div class="price">1,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">قهوة فرنسية</div><div class="item-en">French Coffee</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">قهوة تركية</div><div class="item-en">Turkish Coffee</div></div><div class="price">2,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">اسبريسو سنكل</div><div class="item-en">Single Espresso</div></div><div class="price">3,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">اسبريسو دبل</div><div class="item-en">Double Espresso</div></div><div class="price">4,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">قهوة جكليتية</div><div class="item-en">Chocolate Coffee</div></div><div class="price">4,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">نسكافيه</div><div class="item-en">Nescafé</div></div><div class="price">4,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كابتشينو</div><div class="item-en">Cappuccino</div></div><div class="price">4,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كافيه لاتيه</div><div class="item-en">Café Latte</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">بلو لاتيه</div><div class="item-en">Blue Latte</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">هوت شوكليت</div><div class="item-en">Hot Chocolate</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">سبانيش لاتيه</div><div class="item-en">Spanish Latte</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">حليب مع عسل</div><div class="item-en">Milk with Honey</div></div><div class="price">3,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">موكا</div><div class="item-en">Mocha</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+</div>
+
+<div class="section-head"><h2>المشروبات الباردة</h2><span>cold drinks</span><div class="line"></div></div>
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar">آيس سبانيش لاتيه</div><div class="item-en">Iced Spanish Latte</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">آيس موكا</div><div class="item-en">Iced Mocha</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">كراميل آيس كافيه</div><div class="item-en">Caramel Iced Coffee</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">بلو آيس كافيه</div><div class="item-en">Blue Iced Coffee</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">وايت شوكليت آيس لاتيه</div><div class="item-en">White Chocolate Iced Latte</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">دارك شوكليت آيس كوفي</div><div class="item-en">Dark Chocolate Iced Coffee</div></div><div class="price">6,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">آيس كوفي</div><div class="item-en">Iced Coffee</div></div><div class="price">5,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">شاي مثلج</div><div class="item-en">Iced Tea</div></div><div class="price">1,000 <span class="iqd">IQD</span></div></div>
+</div>
+
+<footer><p>French Countryside Bakery</p></footer>
+</body>
+</html>

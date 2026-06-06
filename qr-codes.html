@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيو آر – مخبز الريف الفرنسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    :root{--green:#0A3E27;--gold:#D9C295;--bg:#f5edd8;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);font-family:'Noto Naskh Arabic',serif;color:var(--green);padding:1.5rem;}
+
+    h1{font-size:1.2rem;font-weight:700;text-align:center;margin-bottom:.3rem;}
+    .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:var(--gold);text-align:center;margin-bottom:1.5rem;}
+
+    .url-note{
+      background:rgba(10,62,39,.07); border:1px dashed rgba(10,62,39,.2);
+      border-radius:6px; padding:.8rem 1rem; margin-bottom:1.5rem;
+      font-size:.8rem; line-height:1.6;
+    }
+    .url-note strong{color:var(--green);}
+    .url-note code{background:rgba(10,62,39,.1);padding:.1rem .3rem;border-radius:3px;font-size:.75rem;}
+
+    .qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .qr-card{
+      background:#fff; border:1px solid rgba(10,62,39,.12);
+      border-radius:8px; padding:1rem; text-align:center;
+    }
+    .qr-card canvas, .qr-card img{width:120px!important;height:120px!important;}
+    .qr-label-ar{font-size:.95rem;font-weight:700;margin-top:.6rem;}
+    .qr-label-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.65rem;color:var(--gold);margin-top:.15rem;}
+    .qr-page{font-size:.6rem;opacity:.35;margin-top:.2rem;direction:ltr;}
+
+    .main-qr{
+      background:var(--green); border-radius:10px;
+      padding:1.2rem; text-align:center; margin-bottom:1rem;
+    }
+    .main-qr canvas, .main-qr img{width:150px!important;height:150px!important;border-radius:6px;}
+    .main-qr-label{color:var(--gold);font-size:1rem;font-weight:700;margin-top:.7rem;}
+    .main-qr-sub{font-family:'Playfair Display',serif;font-style:italic;color:rgba(217,194,149,.65);font-size:.7rem;margin-top:.2rem;}
+
+    @media print{
+      body{padding:.5rem;}
+      .url-note{display:none;}
+    }
+  </style>
+</head>
+<body>
+
+<h1>كيو آر كود المنيو</h1>
+<p class="sub">French Countryside Bakery — QR Codes</p>
+
+<div class="url-note">
+  <strong>⚠️ قبل الطباعة:</strong> بعد رفع الموقع على GitHub Pages، افتح هذا الملف في المتصفح وأضف رابطك في الخانة أدناه ثم اطبع.<br>
+  الرابط الحالي: <code id="current-url">YOUR-USERNAME.github.io/bakery-menu</code><br>
+  <input id="url-input" type="text" placeholder="أدخل رابط GitHub Pages مثلاً: myname.github.io/bakery-menu"
+    style="width:100%;margin-top:.5rem;padding:.4rem .6rem;border:1px solid rgba(10,62,39,.2);border-radius:4px;font-size:.8rem;direction:ltr;"
+    oninput="updateQRs(this.value)">
+</div>
+
+<div class="main-qr">
+  <div id="qr-main"></div>
+  <div class="main-qr-label">المنيو الكامل</div>
+  <div class="main-qr-sub">Full Menu</div>
+</div>
+
+<div class="qr-grid">
+  <div class="qr-card"><div id="qr-breakfast"></div><div class="qr-label-ar">الفطور الصباحي</div><div class="qr-label-en">Petit Déjeuner</div><div class="qr-page">breakfast.html</div></div>
+  <div class="qr-card"><div id="qr-croissant"></div><div class="qr-label-ar">الكرواسون</div><div class="qr-label-en">Croissant</div><div class="qr-page">croissant.html</div></div>
+  <div class="qr-card"><div id="qr-pies"></div><div class="qr-label-ar">الفطائر</div><div class="qr-label-en">Savory Pies</div><div class="qr-page">pies.html</div></div>
+  <div class="qr-card"><div id="qr-pizza"></div><div class="qr-label-ar">البيتزا</div><div class="qr-label-en">Pizza</div><div class="qr-page">pizza.html</div></div>
+  <div class="qr-card"><div id="qr-manakish"></div><div class="qr-label-ar">المناقيش</div><div class="qr-label-en">Manakish</div><div class="qr-page">manakish.html</div></div>
+  <div class="qr-card"><div id="qr-drinks"></div><div class="qr-label-ar">المشروبات</div><div class="qr-label-en">Boissons</div><div class="qr-page">drinks.html</div></div>
+  <div class="qr-card"><div id="qr-waffle"></div><div class="qr-label-ar">الوافل</div><div class="qr-label-en">Waffle</div><div class="qr-page">waffle.html</div></div>
+  <div class="qr-card"><div id="qr-pancake"></div><div class="qr-label-ar">البان كيك</div><div class="qr-label-en">Pancakes</div><div class="qr-page">pancake.html</div></div>
+  <div class="qr-card"><div id="qr-crepe"></div><div class="qr-label-ar">الكريب</div><div class="qr-label-en">Crêpe</div><div class="qr-page">crepe.html</div></div>
+  <div class="qr-card"><div id="qr-hookah"></div><div class="qr-label-ar">الأراكيل</div><div class="qr-label-en">Hookah</div><div class="qr-page">hookah.html</div></div>
+</div>
+
+<script>
+const pages = {
+  main:      { el: 'qr-main',      path: '' },
+  breakfast: { el: 'qr-breakfast', path: 'breakfast.html' },
+  croissant: { el: 'qr-croissant', path: 'croissant.html' },
+  pies:      { el: 'qr-pies',      path: 'pies.html' },
+  pizza:     { el: 'qr-pizza',     path: 'pizza.html' },
+  manakish:  { el: 'qr-manakish',  path: 'manakish.html' },
+  drinks:    { el: 'qr-drinks',    path: 'drinks.html' },
+  waffle:    { el: 'qr-waffle',    path: 'waffle.html' },
+  pancake:   { el: 'qr-pancake',   path: 'pancake.html' },
+  crepe:     { el: 'qr-crepe',     path: 'crepe.html' },
+  hookah:    { el: 'qr-hookah',    path: 'hookah.html' },
+};
+
+let qrInstances = {};
+
+function makeUrl(base, path) {
+  base = base.trim().replace(/\/+$/, '');
+  if (!base.startsWith('http')) base = 'https://' + base;
+  return path ? base + '/' + path : base;
+}
+
+function buildQRs(baseUrl) {
+  Object.entries(pages).forEach(([key, cfg]) => {
+    const el = document.getElementById(cfg.el);
+    el.innerHTML = '';
+    const url = makeUrl(baseUrl, cfg.path);
+    qrInstances[key] = new QRCode(el, {
+      text: url,
+      width: 150,
+      height: 150,
+      colorDark: '#0A3E27',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  });
+}
+
+function updateQRs(val) {
+  if (!val) val = 'YOUR-USERNAME.github.io/bakery-menu';
+  buildQRs(val);
+}
+
+// Initial build
+buildQRs('YOUR-USERNAME.github.io/bakery-menu');
+</script>
+</body>
+</html>

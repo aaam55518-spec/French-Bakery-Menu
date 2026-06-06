@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأراكيل – مخبز الريف الفرنسي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0A3E27;--gold:#D9C295;--bg:#f5edd8;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);font-family:'Noto Naskh Arabic',serif;color:var(--green);}
+    header{background:var(--green);padding:1.5rem 1rem 1.2rem;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(217,194,149,.04) 20px,rgba(217,194,149,.04) 40px);}
+    .back-btn{position:absolute;top:1.1rem;left:1rem;background:none;border:1px solid rgba(217,194,149,.35);border-radius:4px;color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;padding:.3rem .7rem;text-decoration:none;z-index:2;}
+    header h1{font-size:1.5rem;font-weight:700;color:var(--gold);margin-bottom:.15rem;}
+    header p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;color:rgba(217,194,149,.6);letter-spacing:2px;}
+    .items-list{padding:.5rem 1.2rem 1.5rem;}
+    .item-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0;border-bottom:1px solid rgba(10,62,39,.08);}
+    .item-row:last-child{border-bottom:none;}
+    .item-ar{font-size:1rem;font-weight:600;}
+    .item-en{font-family:'Playfair Display',serif;font-style:italic;font-size:.72rem;color:var(--gold);margin-top:.1rem;}
+    .price{font-family:'Playfair Display',serif;font-size:1rem;white-space:nowrap;margin-right:.5rem;}
+    .iqd{font-size:.6rem;opacity:.5;}
+    .add-head{padding:1rem 1.2rem .3rem;font-size:.8rem;opacity:.5;font-style:italic;}
+    footer{text-align:center;padding:1.5rem;}
+    footer p{font-family:'Playfair Display',serif;font-style:italic;font-size:.75rem;opacity:.4;}
+  </style>
+</head>
+<body>
+<header>
+  <a class="back-btn" href="index.html">← Menu</a>
+  <h1>الأراكيل</h1>
+  <p>Hookah</p>
+</header>
+<div class="items-list">
+  <div class="item-row"><div><div class="item-ar">نعناع</div><div class="item-en">Mint</div></div><div class="price">8,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">علج نعناع</div><div class="item-en">Mint Gum</div></div><div class="price">8,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">ليمون نعناع</div><div class="item-en">Lemon Mint</div></div><div class="price">8,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">تفاحتين</div><div class="item-en">Double Apple</div></div><div class="price">8,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">انجلبزي</div><div class="item-en">English Mix</div></div><div class="price">9,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">الريف الفرنسي</div><div class="item-en">French Special</div></div><div class="price">10,000 <span class="iqd">IQD</span></div></div>
+  <div class="item-row"><div><div class="item-ar">إضافة حجر</div><div class="item-en">New Hookah Head</div></div><div class="price">4,000 <span class="iqd">IQD</span></div></div>
+</div>
+<footer><p>French Countryside Bakery</p></footer>
+</body>
+</html>
